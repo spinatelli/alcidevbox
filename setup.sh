@@ -1,5 +1,5 @@
 sudo apt-key adv --keyserver hkps.pool.sks-keyservers.net --recv D58C6920
-sudo sh -c "echo 'deb http://package.crossbar.io/ubuntu trusty main' /etc/apt/sources.list.d/crossbar.list"
+sudo sh -c "echo 'deb http://package.crossbar.io/ubuntu trusty main' > /etc/apt/sources.list.d/crossbar.list"
 curl -sL https://deb.nodesource.com/setup_iojs_3.x | sudo -E bash -
 sudo apt-get update
 sudo apt-get upgrade -y
