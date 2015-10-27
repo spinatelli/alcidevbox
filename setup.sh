@@ -6,15 +6,7 @@ sudo apt-get upgrade -y
 sudo apt-get dist-upgrade -y
 sudo apt-get install -y crossbar python-pip python3-numpy python3 python3-pip git iojs
 sudo pip3 install anaconda pandas autobahn ujson asyncio
-# git clone https://github.com/DataReply/Columba.git
-# cd Columba && git checkout frontend
-# sudo cp banana/ /opt/solr/server/solr-webapp/webapp/ -R
-# npm install
 
-# sudo mkdir /home/cache
-# sudo chmod 775 /home/cache
-# sudo chown vagrant /home/cache
-# sudo npm config set cache /home/cache --global
 sudo npm install -g npm@latest
 sudo npm install grunt-cli express bower -g
 echo 'export PATH=$PATH:/opt/crossbar/bin' > ~/.bashrc
