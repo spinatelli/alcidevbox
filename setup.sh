@@ -11,3 +11,18 @@ sudo npm install -g npm@latest
 sudo npm install grunt-cli express bower -g
 echo 'export PATH=$PATH:/opt/crossbar/bin' > ~/.bashrc
 source ~/.bashrc
+mkdir ~/tmp
+touch ~/run_me.sh
+echo "git clone <repo URL> tmp/Columba
+cd tmp/Columba
+git checkout devbox
+cd ~
+sudo chown vagrant ./Columba -R
+sudo chmod 775 ./Columba -R
+cp tmp/Columba/* Columba/ -R
+cp tmp/Columba/.gitignore Columba
+cp tmp/Columba/.gitattributes Columba
+cp tmp/Columba/.git Columba/ -R
+cd Columba/frontend
+npm install" >> ~/run_me.sh
+sudo chmod +x ~/run_me.sh
