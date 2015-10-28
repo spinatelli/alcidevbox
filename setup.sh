@@ -17,7 +17,6 @@ curl -L -O https://download.elastic.co/elasticsearch/elasticsearch/elasticsearch
 sudo dpkg -i elasticsearch-1.7.3.deb
 sudo update-rc.d elasticsearch defaults 95 10
 sudo /etc/init.d/elasticsearch start
-curl -XPUT 'localhost:9200/device?pretty'
 
 touch /home/vagrant/run_me.sh
 mkdir /home/vagrant/tmp
@@ -34,6 +33,7 @@ echo "cp tmp/Columba/.git Columba/ -R" >> /home/vagrant/run_me.sh
 echo "cd Columba" >> /home/vagrant/run_me.sh
 echo "mv frontend/package.json ." >> /home/vagrant/run_me.sh
 echo "npm install" >> /home/vagrant/run_me.sh
+echo "curl -XPUT 'localhost:9200/device?pretty'" >> /home/vagrant/run_me.sh
 sudo chmod +x /home/vagrant/run_me.sh
 sudo chown vagrant:vagrant /home/vagrant/tmp -R
 sudo chown vagrant:vagrant /home/vagrant/run_me.sh
