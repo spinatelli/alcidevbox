@@ -5,7 +5,7 @@ sudo apt-get update
 sudo apt-get upgrade -y
 sudo apt-get dist-upgrade -y
 sudo apt-get install -y crossbar python-pip python3-numpy python3 python3-pip git iojs
-sudo pip3 install anaconda pandas autobahn ujson asyncio
+sudo pip3 install pandas autobahn ujson asyncio
 
 sudo npm install -g npm@latest
 sudo npm install grunt-cli express bower -g
